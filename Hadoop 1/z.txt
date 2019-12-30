@@ -1,0 +1,38 @@
+write r script use annual changes in......"file as a dataset.read the excel file starting from 2nd row and ending at 22nd row.fetch all three columns and store it in three different variables.using these threee variables draw scater chat 3d scatter plot spinning 3d using base graphics plotlu and lattice
+
+
+
+install.packages("readxl")
+library("readxl")
+
+my_data<-read_excel("Annual-changes-in-the-earths-rot-slip-1.xls", range = "A2:c22")
+my_data
+typeof(my_data)
+my_data1=data.frame(my_data)
+typeof(my_data1)
+c1=my_data$Sr.No
+c1
+c2=my_data$Year
+c2
+c3=my_data$x
+c3
+
+plot(c2, c3, main="Scatterplot of Earth's rotation", 
+     xlab="year", ylab="value of x ", pch=10, frame= FALSE)
+
+
+install.packages("scatterplot3d")
+library(scatterplot3d)
+scatterplot3d(c1,c2,c3,main="3D scatterplot of Earth's rotaion",highlight.3d = TRUE, type = "h")
+
+
+install.packages(c("rgl", "car"))
+library("car")
+scatter3d(x = c1, y = c2, z = c3)
+
+
+
+2)
+create variable called text1 with the value "the current year is 2018
+sub que-a)
+b)
