@@ -1,0 +1,8 @@
+customer(customer_id, name, dob, address, phone, email)
+customer_phone(customer_phone_id, customer_id, phone_no)
+product(product_id, name, category_id)
+product_category(category_id, name)
+vendor(vendor_id, name, address, gps_location)
+product_price(price_id, ts, price, product_id, vendor_id)
+sales(bill_id, customer_id, total_amount)
+sales_product(bill_product_id, bill_id, product_id, qty)
